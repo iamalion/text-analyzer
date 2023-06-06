@@ -5,10 +5,21 @@ function wordCounter(text) {
         return 0;
     }
     let wordCount = 0;
-    const wordsArray = text.split(" ");
+    const textArray = text.split(" ");
     textArray.forEach(function(element) {
         if (!Number(element)){
         wordCount++;
+        }
+    });
+    return wordCount;
+}
+
+function numberOfOccurencesInText(word, text) {
+    const textArray = text.split (" ");
+    let wordCount = 0;
+    textArray.forEach(function(element) {
+        if (word === element) {
+            wordCount++
         }
     });
     return wordCount;
