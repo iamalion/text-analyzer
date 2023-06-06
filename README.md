@@ -91,6 +91,16 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
+Test 12: "It should find all offensive words in a text."
+Code:
+Expected Output:
+
+Test 13: "It should find all offensive words regardless of case."
+Code:
+Expected Output:
+
+Test 14: "It should find all offensive words regardless of punction."
+
 ## Known Bugs
 
 * 

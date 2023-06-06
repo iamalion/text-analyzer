@@ -25,3 +25,18 @@ function numberOfOccurencesInText(word, text) {
     });
     return wordCount;
 }
+
+function omitOffensiveWords(text) {
+    const offensiveWords = ["zoinks" ,"muppeteer", "biffaroni", "loopdaloop"];
+    const words = text.split(" ");
+
+    const filteredWords = [];
+    words.forEach(function(word) {
+        if (!offensiveWords.includes(word.toLowerCase())) {
+            filteredWords.push(word);
+        }
+    });
+
+    return filteredWords.join(" ")
+}
+
