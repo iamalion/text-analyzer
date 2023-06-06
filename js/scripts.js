@@ -27,7 +27,8 @@ function numberOfOccurencesInText(word, text) {
 }
 
 function omitOffensiveWords(text) {
-    const offensiveWords = ["zoinks" ,"muppeteer", "biffaroni", "loopdaloop"];
+    const offensiveWords = ["zoinks" ,"muppeteer", 
+    "biffaroni", "loopdaloop"];
     const words = text.split(" ");
 
     const filteredWords = [];

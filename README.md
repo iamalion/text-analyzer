@@ -99,7 +99,24 @@ Test 13: "It should find all offensive words regardless of case."
 Code:
 Expected Output:
 
-Test 14: "It should find all offensive words regardless of punction."
+<!--- >this code works up to this test case:
+
+function omitOffensiveWords(text) {
+    const offensiveWords = ["zoinks" ,"muppeteer", 
+    "biffaroni", "loopdaloop"];
+    const words = text.split(" ");
+
+    const filteredWords = [];
+    words.forEach(function(word) {
+        if (!offensiveWords.includes(word.toLowerCase())) {
+            filteredWords.push(word);
+        }
+    });
+
+    return filteredWords.join(" ")
+}
+-->
+Test 14: "It should find all offensive words regardless of puncuation."
 
 ## Known Bugs
 
