@@ -43,6 +43,12 @@ text = "           ",
 wordCounter("            ");
 Expected Output: 0
 
+Test 5: "It should not count numbers as words."
+Code:
+text = "hi there 77 19";
+wordCounter("hi there 77 19");
+Expected Output: 2
+
 ## Known Bugs
 
 * 
