@@ -91,15 +91,18 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
-Test 12: "It should find all offensive words in a text."
+Test 12: "It should remove all offensive words in a text."
 Code:
-Expected Output:
+const text = "zoinks this is loopdaloop";
+omitOffensiveWords(text);
+Expected Output: "this is"
 
-Test 13: "It should find all offensive words regardless of case."
+Test 13: "It should remove all offensive words regardless of case."
 Code:
-Expected Output:
+const text = "Zoinks this is LOOPDALOOP"
+Expected Output: "this is"
 
-<!--- >this code works up to this test case:
+<!--- >this code works up to test 13:
 
 function omitOffensiveWords(text) {
     const offensiveWords = ["zoinks" ,"muppeteer", 
@@ -116,7 +119,11 @@ function omitOffensiveWords(text) {
     return filteredWords.join(" ")
 }
 -->
-Test 14: "It should find all offensive words regardless of puncuation."
+Test 14: "It should remove all offensive words regardless of puncuation."
+Code:
+const text = "Zoinks, this is LOOPDALOOP!"
+omitOffensiveWords(text)
+Expected Output: "this is"
 
 ## Known Bugs
 
