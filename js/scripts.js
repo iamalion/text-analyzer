@@ -1,5 +1,4 @@
 // Business Logic
-
 function wordCounter(text) {
     if (text.trim().length === 0) {
         return 0;
@@ -60,6 +59,27 @@ function handleFormSubmission() {
     document.getElementById("selected-count").innerText = occurrencesOfWord;
   }
   
+  function boldPassage(word, text) {
+    if ((text.trim().length === 0) || (word.trim().length === 0)) {
+      return null;
+    }
+    const p = document.createElement("p");
+    let textArray = text.split(" ");
+    textArray.forEach(function(element, index) {
+      if (word === element) {
+        const bold = document.createElement("strong");
+        bold.append(element);
+        p.append(bold);
+      } else {
+        p.append(element);
+      }
+      if (index !== (textArray.length - 1)) {
+        p.append(" ");
+      }
+    });
+    return p;
+  }
+
   window.addEventListener("load", function() {
     document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
   });

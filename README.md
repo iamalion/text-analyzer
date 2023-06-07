@@ -128,7 +128,27 @@ const text = "Zoinks, this is LOOPDALOOP!"
 omitOffensiveWords(text)
 Expected Output: "this is"
 -->
+Describe: boldPassage()
+Test 1: "It should return null if no word or text is entered."
+Code: 
+const text = "";
+const word = "";
+boldPassage(word, text);
+expected output: null
 
+Test 2: "It should return a non-matching word in a p tag."
+Code:
+const word = "hello";
+const text = "yo";
+boldPassage(word, text);
+Expected Output: <p>yo</p>
+
+Test 3: "It should return a matching word in a strong tag."
+Code:
+const word = "hello";
+const text = "hello";
+boldPassage(word, text);
+Expected Output: <p><strong>hello</strong></p>
 
 
 ## Known Bugs
