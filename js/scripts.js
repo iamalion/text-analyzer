@@ -52,7 +52,18 @@ function boldPassage(word, text) {
     });
     return p;
   }
-
+  function mostCommonWords (text) {
+    const textArray = text.split(" ");
+    const mostCommonWordsObject = {}
+    textArray.forEach(function (element) {
+      if (!Number(element)){
+        if(mostCommonWordsObject[element]){
+          mostCommonWordsObject[element]++;
+        } else { mostCommonWordsObject[element] = 1}
+      }
+    });
+    return mostCommonWordsObject
+  }
 
 // function omitOffensiveWords(text) {
 //     const offensiveWords = ["zoinks" ,"muppeteer", "biffaroni", "loopdaloop"];

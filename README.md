@@ -150,6 +150,8 @@ const text = "hello";
 boldPassage(word, text);
 Expected Output: <p><strong>hello</strong></p>
 
+Describe: 
+
 
 ## Known Bugs
 
