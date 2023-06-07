@@ -91,6 +91,8 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
+Test 11.5: "If an empty string is passed in as a word, it should return 0.
+
 Test 12: "It should remove all offensive words in a text."
 Code:
 const text = "zoinks this is loopdaloop";
@@ -119,11 +121,15 @@ function omitOffensiveWords(text) {
     return filteredWords.join(" ")
 }
 -->
+<!-- This test still isn't working
 Test 14: "It should remove all offensive words regardless of puncuation."
 Code:
 const text = "Zoinks, this is LOOPDALOOP!"
 omitOffensiveWords(text)
 Expected Output: "this is"
+-->
+
+
 
 ## Known Bugs
 
