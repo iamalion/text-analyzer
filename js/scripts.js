@@ -26,12 +26,38 @@ function numberOfOccurencesInText(word, text) {
     return wordCount;
 }
 
+
 function omitOffensiveWords(text) {
     const offensiveWords = ["zoinks" ,"muppeteer", "biffaroni", "loopdaloop"];
-    const textArray = text.replace(/[^\w\s]|_/g, "").split(" ");
-    textArray.forEach(function(element) {
-        if(offensiveWords.toLowerCase().includes(word.toLowerCase())){
+    const words = text.replace(/[^\w\s]|_/g, "").split(" ");
+    words.forEach(function(word) {
+        if (!offensiveWords.includes(word.toLowerCase())) {
+            return words;
         }
     });
- return textArray;
 }
+
+// function omitOffensiveWords(text) {
+//     const offensiveWords = ["zoinks" ,"muppeteer", "biffaroni", "loopdaloop"];
+//     const textArray = text.replace(/[^\w\s]|_/g, "").split(" ");
+//     textArray.forEach(function(element) {
+//         if(offensiveWords.includes(element.toLowerCase())){
+//             return textArray
+//         }
+//     });
+// }
+
+//UI Logic
+function handleFormSubmission(event) {
+    event.preventDefault();
+    const passage = document.getElementById("text-passage").value;
+    const word = document.getElementById("word").value;
+    const wordCount = wordCounter(passage);
+    const occurrencesOfWord = numberOfOccurencesInText(word, passage);
+    document.getElementById("total-count").innerText = wordCount;
+    document.getElementById("selected-count").innerText = occurrencesOfWord;
+  }
+  
+  window.addEventListener("load", function() {
+    document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
+  });
